@@ -86,4 +86,26 @@ public class BottomUp {
 
 }
 ```
+  
+   
+```java
+	//DP Bottom-up fib solution, O(n) space and time
+public static int fibDP(int n) {
+	
+	int[] table = new int[n+1];
+	
+	table[0] = 1;
+	table[1] = 1;
+	
+	int index = 2;
+	
+	while(index < n) {
+		table[index] = table[index - 1] + table[index - 2];
+		index++;
+	}
+	
+	return table[index-1];		
+	
+}
+```
 
